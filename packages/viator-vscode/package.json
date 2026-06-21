@@ -1,0 +1,44 @@
+{
+  "name": "viator-vscode",
+  "displayName": "Viator AI Annotator",
+  "description": "Seamless, traceless AI annotations using global storage and MCP.",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:viator.addAnnotation"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "viator.addAnnotation",
+        "title": "Viator: Add AI Annotation"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "viator.addAnnotation",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "viator.addAnnotation",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0"
+  }
+}

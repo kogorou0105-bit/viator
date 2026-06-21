@@ -1,0 +1,6 @@
+{
+  "name": "viator-skill",
+  "version": "0.1.0",
+  "description": "AI Agent Skill definition for processing Viator annotations.",
+  "private": true
+}

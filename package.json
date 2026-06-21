@@ -1,0 +1,7 @@
+{
+  "name": "viator-project",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
